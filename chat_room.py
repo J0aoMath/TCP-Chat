@@ -2,9 +2,9 @@ import socket
 import threading
 
 # Connection Data
-host = '127.0.0.1'
-port = 55555
-
+host = '192.168.1.6'
+port = 56810
+#192.168.1.6:50296
 # Starting Server
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #The first one (AF_INET) indicates that we are using an internet 
@@ -62,3 +62,4 @@ def receive():
         # Start Handling Thread For Client
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
+receive()
